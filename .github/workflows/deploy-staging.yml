@@ -8,3 +8,6 @@ on:
 jobs:
   builds:
   runs-on: ubuntu-lastest
+  
+  if: contains(github.event.pull_request.labels.*.name, 'stage')
+    
